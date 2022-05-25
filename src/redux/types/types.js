@@ -3,3 +3,7 @@ export const authTypes = {
   LOGOUT: 'LOGOUT',
   REGISTER: 'REGISTER'
 }
+
+export const weatherTypes = {
+  FETCH_WEATHER: 'FETCH_WEATHER'
+}

@@ -1,9 +1,19 @@
+import React from 'react';
 import '../styles/App.css';
+import Card from './Card';
+import Header from './Header';
+import Searcher from './Searcher';
 
 const App = () => {
+
+
   return (
     <div className="App">
-      <h1>App</h1>
+      <Header />
+      <div className='container'>
+        <Searcher />
+        <Card />
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { getAuth, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile, signInWithPopup } from 'firebase/auth';
+import { getAuth, deleteUser, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile, signInWithPopup } from 'firebase/auth';
 import { facebook, google } from '../../firebase/firebaseConfig';
 import { authTypes } from '../types/types';
 
@@ -80,16 +80,16 @@ export const logoutAsync = () => {
   return (dispatch) => {
     const auth = getAuth()
 
-    const deleteUser = auth.currentUser;
-    console.log(deleteUser)
+    const userBorrar = auth.currentUser;
+    console.log(userBorrar)
 
-    deleteUser(deleteUser)
+    deleteUser(userBorrar)
       .then(() => {
-        console.log("Usuario Eliminado")
+        console.log("usuario eliminado")
       })
       .catch(error => {
-        console.warn("No se pudo eliminar el usuario", error)
-
+        console.warn("No se pudo eliminar", error)
+      
       })
     signOut(auth)
       .then((user) => {
