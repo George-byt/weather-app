@@ -7,3 +7,8 @@ export const authTypes = {
 export const weatherTypes = {
   FETCH_WEATHER: 'FETCH_WEATHER'
 }
+
+export const newUserTypes = {
+  ADD_USER: 'ADD_USER',
+  GET_USER: 'GET_USER'
+}

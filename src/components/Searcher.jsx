@@ -12,6 +12,7 @@ const Searcher = () => {
       const countryValue = country.value
       dispatch(fetchWeather(cityValue, countryValue))
     }
+
   return (
     <section className='input-section'>
         <div className='container'>
